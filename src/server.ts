@@ -1,12 +1,12 @@
 import { createServer, IncomingMessage, Server } from "http";
 import { routeHandler } from "./routes/route";
+import config from "./config";
 
 const server: Server = createServer((req: IncomingMessage, res) => {
   routeHandler(req, res);
 });
 
-const PORT = 5000;
 
-server.listen(PORT, () => {
-  console.log(`Server is running ${PORT}`);
+server.listen(config.port, () => {
+  console.log(`Server is running ${config.port}`);
 });
