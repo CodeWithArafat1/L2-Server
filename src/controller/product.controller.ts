@@ -63,13 +63,17 @@ export const productController = async (
       sendResponse(res, 500, false, "Server Error", error);
     }
   } else if (method === "DELETE" && id !== null) {
-    const findIndex = products.findIndex((p: IProduct) => p.id === id);
-    if (findIndex !== -1) {
-      products.splice(findIndex, 1);
-      insertProduct(products);
-      sendResponse(res, 200, true, "Product deleted successfully!", null);
-    } else {
-      sendResponse(res, 404, false, "404 Not found", null);
+    try {
+      const findIndex = products.findIndex((p: IProduct) => p.id === id);
+      if (findIndex !== -1) {
+        products.splice(findIndex, 1);
+        insertProduct(products);
+        sendResponse(res, 200, true, "Product deleted successfully!", null);
+      } else {
+        sendResponse(res, 404, false, "404 Not found", null);
+      }
+    } catch (error) {
+      sendResponse(res, 500, false, "Server Error", error);
     }
   } else {
     sendResponse(res, 404, false, "404 Not found", null);
