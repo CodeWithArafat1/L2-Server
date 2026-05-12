@@ -1,0 +1,30 @@
+[
+  {
+    "id": 2,
+    "name": "Galaxy S24 Ultra",
+    "price": 1299,
+    "brand": "Samsung",
+    "description": "Flagship Android phone featuring AI tools, 200MP camera, and built-in S Pen."
+  },
+  {
+    "id": 3,
+    "name": "XPS 15 Laptop",
+    "price": 1899,
+    "brand": "Dell",
+    "description": "High-performance laptop with Intel Core i7 processor and stunning OLED display."
+  },
+  {
+    "id": 4,
+    "name": "WH-1000XM5",
+    "price": 399,
+    "brand": "Sony",
+    "description": "Wireless noise-cancelling headphones with exceptional sound quality and battery life."
+  },
+  {
+    "id": 5,
+    "name": "iPad Air M2",
+    "price": 799,
+    "brand": "Apple",
+    "description": "Lightweight tablet powered by Apple's M2 chip, ideal for productivity and entertainment."
+  }
+]
